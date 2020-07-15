@@ -1,0 +1,33 @@
+.nav ul {
+  display: flex;
+  list-style: none;
+  flex: 1;
+}
+.nav ul li {
+  margin-right: 10px;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+}
+.main img {
+  height: 75%;
+  width: auto;
+}
+.main .siteList {
+  display: flex;
+  flex: 1;
+  justify-content: content;
+  list-style: none;
+}
+.main .siteList li {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
