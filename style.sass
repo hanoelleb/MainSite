@@ -1,11 +1,42 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap)
+
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap)
+
+$font-stack-main: "Press Start 2P", "Open Sans", Arial
+$font-stack-second: "Press Start 2P", "Open Sans", Helvetica
+
+body
+    font-family: $font-stack-main
 
 .nav
     ul
         display: flex
+        justify-content: center
         list-style: none
         flex: 1
         li
             margin-right: 10px
+            button
+                font-family: $font-stack-main
+                padding: 5px
+                background: steelblue
+                color: white
+                border-radius: 5px
+                &:hover
+                    background: lightsteelblue
+
+#content
+    #link_desc
+        left: 10vw
+        top: 10vw
+        position: fixed
+        width: 25vw
+        height: 66vh
+        h2
+            font-family: $font-stack-main
+            color: coral
+        p
+            font-family: "Open Sans"
 
 .main
     margin-left: auto
@@ -14,11 +45,19 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    width: 45vw
+    width: 100vw
 
-    img
-        height: 60%
-        width: auto
+    .scaler
+        width: 40vw
+
+    #name
+        color: steelblue
+
+    #link_desc
+        position: fixed
+        border: solid black 1px
+        width: 33vw
+        height: 66vh
 
     .siteList
         display: flex
@@ -26,5 +65,10 @@
         justify-content: content
         list-style: none
         li
-            margin-right: 10px
+            margin-right: 5vw
+            a
+                text-decoration: none
+                color: black
+                &:hover
+                    color: lightsteelblue
 

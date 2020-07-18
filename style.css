@@ -1,11 +1,35 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&family=Press+Start+2P&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);
+body {
+  font-family: "Press Start 2P", "Open Sans", Arial; }
+
 .nav ul {
   display: flex;
+  justify-content: center;
   list-style: none;
-  flex: 1;
-}
-.nav ul li {
-  margin-right: 10px;
-}
+  flex: 1; }
+  .nav ul li {
+    margin-right: 10px; }
+    .nav ul li button {
+      font-family: "Press Start 2P", "Open Sans", Arial;
+      padding: 5px;
+      background: steelblue;
+      color: white;
+      border-radius: 5px; }
+      .nav ul li button:hover {
+        background: lightsteelblue; }
+
+#content #link_desc {
+  left: 10vw;
+  top: 10vw;
+  position: fixed;
+  width: 25vw;
+  height: 66vh; }
+  #content #link_desc h2 {
+    font-family: "Press Start 2P", "Open Sans", Arial;
+    color: coral; }
+  #content #link_desc p {
+    font-family: "Open Sans"; }
 
 .main {
   margin-left: auto;
@@ -14,20 +38,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45vw;
-}
-.main img {
-  height: 60%;
-  width: auto;
-}
-.main .siteList {
-  display: flex;
-  flex: 1;
-  justify-content: content;
-  list-style: none;
-}
-.main .siteList li {
-  margin-right: 10px;
-}
+  width: 100vw; }
+  .main .scaler {
+    width: 40vw; }
+  .main #name {
+    color: steelblue; }
+  .main #link_desc {
+    position: fixed;
+    border: solid black 1px;
+    width: 33vw;
+    height: 66vh; }
+  .main .siteList {
+    display: flex;
+    flex: 1;
+    justify-content: content;
+    list-style: none; }
+    .main .siteList li {
+      margin-right: 5vw; }
+      .main .siteList li a {
+        text-decoration: none;
+        color: black; }
+        .main .siteList li a:hover {
+          color: lightsteelblue; }
 
 /*# sourceMappingURL=style.css.map */
