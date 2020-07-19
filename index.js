@@ -117,16 +117,6 @@ function makeAbout() {
      var marker = document.createElement('img');
      marker.id = 'marker';
      marker.src = 'dialogueButton.png';
-     /*marker.addEventListener('click', () => {
-         for (let i = 0; i < aboutPages.length; i++) {
-	     if (aboutPages[i].style.display === 'none') {
-		 print(i);
-		 print(aboutPages[i].style);
-		 aboutPages[i].style.display = 'block';
-		 return;
-	     }
-	 }
-     });*/
 
      addDialogue(marker);
      for (let j = 0; j < aboutPages.length; j++)
@@ -143,20 +133,14 @@ function makePar(content) {
 }
 
 function addDialogue(part) {
-    print('I do not understand');
-    /*
     part.addEventListener('click', function() {
-	 print(aboutPages);
          for (let i = 0; i < aboutPages.length; i++) {
-             if (aboutPages[i].style.display === 'none') {
-                 print(i);
-                 print(aboutPages[i].style);
+             if (!aboutPages[i].style.display) {
                  aboutPages[i].style.display = 'block';
                  return;
              }
          }
    });
-   */
 }
 
 function makeContact() {
