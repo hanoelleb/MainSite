@@ -7,6 +7,8 @@ aboutbutton.addEventListener('click', makeAbout);
 var contactbutton = document.getElementById('Contact');
 contactbutton.addEventListener('click', makeContact);
 
+var aboutPages = [];
+
 var linkDescs = [
   'A link to my project site. All projects on that site are either hosted'+
   ' on gitpages for front-end only applications and on heroku to deploy' +
@@ -91,6 +93,70 @@ function makeAbout() {
      var content = document.getElementById('content');
      content.innerHTML = '';
 
+     var firstPar = makePar('Hello! My name is Hannah Burnett. I studied computer science at the University of California, Irvine and graduated Spring 2020.');
+     firstPar.style.display = 'block';
+     content.appendChild(firstPar);
+     aboutPages.push(firstPar);
+
+     var secondPar = makePar('I primarily use Javascript, Java, and C#, but I have had exposure to other languages such as C++, Python, and Ruby among others. My primary interests are web, app, and game development.');
+     content.appendChild(secondPar);   
+     aboutPages.push(secondPar);
+
+     var thirdPar = makePar('Aside from programming languages, I am also adept at HTML and CSS, along with web frameworks/libraries ReactJS, NodeJS, and Sass. I am also familiar with using NPM and Webpack for web applications. I utilize Github for version control. I am also familiar with Unity for game development.');
+     content.appendChild(thirdPar);
+     aboutPages.push(thirdPar);
+
+     var fourthPar = makePar('Outside of programming, I enjoy creating pixel art (primarily portraits, character sprites, and small item sprites), playing video games, knitting, doing yoga, and solving puzzles like crosswords and sudoku. I am also currently running a blog detailing the development of a game I am makiing.');
+     content.appendChild(fourthPar);
+     aboutPages.push(fourthPar);
+
+     var fifthPar = makePar('I can be found on Github, Reddit, Instagram, and Wordpress.Links to each can be found on the Contact page.');
+     content.appendChild(fifthPar);
+     aboutPages.push(fifthPar);
+
+     var marker = document.createElement('img');
+     marker.id = 'marker';
+     marker.src = 'dialogueButton.png';
+     /*marker.addEventListener('click', () => {
+         for (let i = 0; i < aboutPages.length; i++) {
+	     if (aboutPages[i].style.display === 'none') {
+		 print(i);
+		 print(aboutPages[i].style);
+		 aboutPages[i].style.display = 'block';
+		 return;
+	     }
+	 }
+     });*/
+
+     addDialogue(marker);
+     for (let j = 0; j < aboutPages.length; j++)
+        addDialogue(aboutPages[j]);
+
+     content.appendChild(marker);
+}
+
+function makePar(content) {
+     var par = document.createElement('p');
+     par.className = 'about';
+     par.innerHTML = content;
+     return par;
+}
+
+function addDialogue(part) {
+    print('I do not understand');
+    /*
+    part.addEventListener('click', function() {
+	 print(aboutPages);
+         for (let i = 0; i < aboutPages.length; i++) {
+             if (aboutPages[i].style.display === 'none') {
+                 print(i);
+                 print(aboutPages[i].style);
+                 aboutPages[i].style.display = 'block';
+                 return;
+             }
+         }
+   });
+   */
 }
 
 function makeContact() {
