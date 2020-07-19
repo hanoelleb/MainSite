@@ -92,6 +92,10 @@ function makeSiteLink(site, label, num) {
 function makeAbout() {
      var content = document.getElementById('content');
      content.innerHTML = '';
+     
+     var header = document.createElement('h2');
+     header.innerHTML = 'About Me';
+     content.appendChild(header);
 
      var firstPar = makePar('Hello! My name is Hannah Burnett. I studied computer science at the University of California, Irvine and graduated Spring 2020.');
      firstPar.style.display = 'block';
@@ -106,7 +110,7 @@ function makeAbout() {
      content.appendChild(thirdPar);
      aboutPages.push(thirdPar);
 
-     var fourthPar = makePar('Outside of programming, I enjoy creating pixel art (primarily portraits, character sprites, and small item sprites), playing video games, knitting, doing yoga, and solving puzzles like crosswords and sudoku. I am also currently running a blog detailing the development of a game I am makiing.');
+     var fourthPar = makePar('Outside of programming, I enjoy creating pixel art (primarily portraits, character sprites, and small item sprites), playing video games, knitting, doing yoga, and solving puzzles like crosswords and sudoku. I am also currently running a blog detailing the development of a game I am making.');
      content.appendChild(fourthPar);
      aboutPages.push(fourthPar);
 
@@ -134,7 +138,7 @@ function makePar(content) {
 
 function addDialogue(part) {
     part.addEventListener('click', function() {
-         for (let i = 0; i < aboutPages.length; i++) {
+         for (let i = 1; i < aboutPages.length; i++) {
              if (!aboutPages[i].style.display) {
                  aboutPages[i].style.display = 'block';
                  return;

@@ -29,11 +29,12 @@ body {
     position: fixed;
     width: 25vw;
     height: 66vh; }
-    #content #link_desc h2 {
-      font-family: "Press Start 2P", "Open Sans", Arial;
-      color: coral; }
     #content #link_desc p {
       font-family: "Open Sans"; }
+
+h2 {
+  font-family: "Press Start 2P", "Open Sans", Arial;
+  color: coral; }
 
 .main {
   margin-left: auto;
