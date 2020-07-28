@@ -29,7 +29,7 @@ function makeHomepage() {
 
      var portrait = document.createElement('img');
      portrait.className = 'scaler';
-     portrait.src = 'PortraitScaled.png';
+     portrait.src = 'PortraitHeadband.png';
      main.appendChild(portrait);
 
      var name = document.createElement('h2');
