@@ -117,10 +117,17 @@ function makeAbout() {
      var fifthPar = makePar('I can be found on Github, Reddit, Instagram, and Wordpress.Links to each can be found on the Contact page.');
      content.appendChild(fifthPar);
      aboutPages.push(fifthPar);
+    
+     var marker = document.createElement('div');
+     
+     var label = document.createElement('span');
+     label.innerHTML = 'Click to read more';
+     marker.appendChild(label);
 
-     var marker = document.createElement('img');
-     marker.id = 'marker';
-     marker.src = 'dialogueButton.png';
+     var arrow = document.createElement('img');
+     arrow.id = 'marker';
+     arrow.src = 'dialogueButton.png';
+     marker.appendChild(arrow);
 
      addDialogue(marker);
      for (let j = 0; j < aboutPages.length; j++)
