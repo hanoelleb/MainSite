@@ -9,6 +9,8 @@ contactbutton.addEventListener('click', makeContact);
 
 var aboutPages = [];
 
+var ABOUT_ME = 0;
+
 var linkDescs = [
   'A link to my project site. All projects on that site are either hosted'+
   ' on gitpages for front-end only applications and on heroku to deploy' +
@@ -55,7 +57,7 @@ function makeSiteList() {
 	                            'Projects', 0 ));
     siteList.append(makeSiteLink(
 	'https://github.com/hanoelleb?tab=repositories', 'Repositories', 1 ));
-    siteList.append(makeSiteLink('', 'Dev Blog', 2 ));
+    siteList.append(makeSiteLink('https://hometownherogame.wordpress.com/', 'Dev Blog', 2 ));
     siteList.append(makeSiteLink('', 'Art', 3 ));
 
     return siteList;
@@ -119,6 +121,7 @@ function makeAbout() {
      aboutPages.push(fifthPar);
     
      var marker = document.createElement('div');
+     marker.id = 'mark';
      
      var label = document.createElement('span');
      label.innerHTML = 'Click to read more';
@@ -128,11 +131,12 @@ function makeAbout() {
      arrow.id = 'marker';
      arrow.src = 'dialogueButton.png';
      marker.appendChild(arrow);
-
+     
+     if (aboutPages.length < 5) {
      addDialogue(marker);
+     }
      for (let j = 0; j < aboutPages.length; j++)
         addDialogue(aboutPages[j]);
-
      content.appendChild(marker);
 }
 
@@ -140,12 +144,16 @@ function makePar(content) {
      var par = document.createElement('p');
      par.className = 'about';
      par.innerHTML = content;
+     ABOUT_ME++;
      return par;
 }
 
 function addDialogue(part) {
     part.addEventListener('click', function() {
          for (let i = 1; i < aboutPages.length; i++) {
+             if (i === ABOUT_ME-1) {
+	         document.getElementById('mark').style.display = 'none';
+	     }
              if (!aboutPages[i].style.display) {
                  aboutPages[i].style.display = 'block';
                  return;
